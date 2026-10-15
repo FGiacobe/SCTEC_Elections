@@ -1,25 +1,35 @@
-# Data Information
+# Informações sobre os dados
 
-This document provides information about the election data used in the project, including the structure of the CSV file and the data types of each column.
+Este documento apresenta informações sobre os dados eleitorais fictícios usados no projeto, incluindo a estrutura do arquivo CSV e os tipos de dados de cada coluna.
 
-## CSV File Structure
+## Estrutura do arquivo CSV
 
-The CSV file, named `eleicoes.csv`, contains the following columns:
+O arquivo CSV, chamado `eleicoes.csv`, contém as seguintes colunas:
 
-| Column Name | Description | Data Type | Example |
+| Nome da coluna | Descrição | Tipo de dado | Exemplo |
 |-------------|-------------|-----------|---------|
-| ano         | Year of the election | int64 | 2024 |
-| estado      | State where the election took place | category | SP |
-| cidade      | City where the election took place | category | São Paulo |
-| zona        | Electoral zone | category | 1 |
-| secao       | Electoral section | category | 1 |
-| cargo       | Position being contested | category | Mayor |
-| candidato   | Candidate name | category | John Doe |
-| partido     | Political party | category | ABC |
-| numero      | Candidate number | category | 12345 |
-| votos       | Number of votes received | int64 | 1000 |
+| ano         | Ano da eleição | int64 | 2024 |
+| estado      | Estado onde ocorreu a eleição | category | SP |
+| cidade      | Cidade onde ocorreu a eleição | category | São Paulo |
+| zona        | Zona eleitoral | category | 1 |
+| secao       | Seção eleitoral | category | 1 |
+| cargo       | Cargo em disputa | category | Prefeito |
+| candidato   | Nome do candidato | category | John Doe |
+| partido     | Partido político | category | ABC |
+| numero      | Número do candidato | category | 12345 |
+| votos       | Número de votos recebidos | int64 | 1000 |
 
-## Notes
+## Exemplo de dados
 
-- The `category` data type is used for columns with a limited set of possible values to optimize memory usage.
-- The `int64` data type is used for numerical columns to ensure accurate calculations and sufficient range.
+| ano | estado | cidade | zona | secao | cargo | candidato | partido | numero | votos |
+|-----|--------|--------|------|-------|-------|-----------|---------|--------|-------|
+| 2024 | SP     | São Paulo | 0001 | 0001  | Prefeito | John Doe  | ABC     | 12345  | 1000  |
+
+## Tamanho do conjunto de dados
+
+O arquivo CSV contém um conjunto de dados com 32 linhas e 10 colunas, cada uma representando um registro único de votação.
+
+## Observações
+
+- O tipo de dado `category` é usado em colunas com um conjunto limitado de valores possíveis para otimizar o uso de memória.
+- O tipo de dado `int64` é usado em colunas numéricas para garantir cálculos precisos e uma faixa de valores suficiente.

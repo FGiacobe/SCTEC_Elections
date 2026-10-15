@@ -25,22 +25,22 @@ def main():
     exports = {
         "1": (
             lambda: use_cases.sample_data(data),
-            "amostragem_dos_dados.csv",
+            "ex_amostragem_dos_dados.csv",
             "Amostragem dos dados exportada",
         ),
         "2": (
             lambda: use_cases.calculate_votes_per_party(data),
-            "votos_por_partido.csv",
+            "ex_votos_por_partido.csv",
             "Votos por partido exportados",
         ),
         "3": (
             lambda: use_cases.calculate_winners(data, position="Prefeito"),
-            "prefeitos_eleitos.csv",
+            "ex_prefeitos_eleitos.csv",
             "Prefeitos eleitos exportados",
         ),
         "4": (
             lambda: use_cases.calculate_winners(data, position="Vereador"),
-            "vereadores_eleitos.csv",
+            "ex_vereadores_eleitos.csv",
             "Vereadores eleitos exportados",
         ),
     }
